@@ -105,9 +105,6 @@ db.medicos.updateOne(
   { $set: { especialidade: "Cardiologista" } }
 );
 
-// =====================================================================
-// 4) EXERCÍCIO — ATUALIZAÇÕES
-// =====================================================================
 
 // 1) Atualizar data da consulta de Alice
 db.consultas.updateMany(
@@ -128,9 +125,6 @@ db.medicos.updateMany(
 );
 
 
-// =====================================================================
-// 5) EXERCÍCIO — CONSULTAS (aggregate)
-// =====================================================================
 
 // 1) Quantas consultas cada médico realizou — Modelo Integrado
 db.consultas.aggregate([
@@ -179,5 +173,4 @@ db.medicos.find({
   nome: "Dr. Smith"
 });
 
-// Passo B:
-// db.consultas.find({ medico_id: ObjectId("ID_DO_DR_SMITH") });
+
