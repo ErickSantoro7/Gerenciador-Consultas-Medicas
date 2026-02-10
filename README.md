@@ -4,6 +4,7 @@ Este projeto demonstra a modelagem, inserção, consulta, atualização e agrega
 
 O objetivo é simular um sistema simples de agendamento de consultas médicas, comparando abordagens de modelagem e suas implicações práticas.
 
+
 🛠️ Tecnologias Utilizadas
 
 MongoDB
@@ -14,9 +15,12 @@ Conceitos de NoSQL
 
 Aggregation Framework
 
+
+
 📚 Estrutura do Projeto
 
 O banco utiliza as seguintes coleções:
+
 
 📌 consultas
 
@@ -48,6 +52,8 @@ status
 
 medico_id (usado no modelo normalizado)
 
+
+
 📌 medicos
 
 Coleção utilizada no modelo normalizado, armazenando apenas os dados dos médicos.
@@ -61,6 +67,8 @@ nome
 crm
 
 especialidade
+
+
 
 🧠 Modelagem de Dados
 🔹 Modelo Integrado (Embedded)
@@ -81,6 +89,8 @@ Redundância de dados
 
 Atualizações podem afetar múltiplos documentos
 
+
+
 🔹 Modelo Normalizado (Referenciado)
 
 Os dados do médico ficam em uma coleção separada (medicos) e são referenciados por medico_id.
@@ -99,6 +109,8 @@ Consultas mais complexas
 
 Necessidade de $lookup
 
+
+
 ⚙️ Funcionalidades Implementadas
 
 ✔️ Inserção de múltiplos documentos (insertMany)
@@ -107,6 +119,8 @@ Necessidade de $lookup
 ✔️ Agregações com $group, $lookup, $unwind e $project
 ✔️ Comparação prática entre modelos de dados
 ✔️ Contagem de consultas por médico
+
+
 
 📊 Exemplos de Agregação
 🔹 Quantidade de consultas por médico (Modelo Integrado)
@@ -118,6 +132,7 @@ db.consultas.aggregate([
     }
   }
 ]);
+
 
 🔹 Quantidade de consultas por médico (Modelo Normalizado)
 db.consultas.aggregate([
@@ -144,6 +159,7 @@ db.consultas.aggregate([
     }
   }
 ]);
+
 
 🎯 Objetivo do Projeto
 
